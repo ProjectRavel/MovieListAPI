@@ -1,7 +1,7 @@
 <h1 align="center">MovieListAPI</h1>
 
 <p align="center">
-  <img src="https://your_image_url_here" alt="Logo" width="120" height="120">
+  <img src="https://avatars.githubusercontent.com/u/95059469?s=400&u=b01746e99a9f8594c69361ea5de9e189394661a9&v=4" alt="Logo" width="120" height="120">
 </p>
 
 <p align="center">
