@@ -1,30 +1,48 @@
-# AJAX Search with API Integration
+<h1 align="center">MovieListAPI</h1>
 
-This repository contains a demonstration of AJAX implementation for interactive searching on a website, integrating with an API to fetch data dynamically without requiring page reloads.
+<p align="center">
+  <img src="https://your_image_url_here" alt="Logo" width="120" height="120">
+</p>
+
+<p align="center">
+  <a href="https://github.com/projectravel/movielistapi">
+    <img src="https://img.shields.io/github/stars/projectravel/movielistapi?style=flat-square" alt="GitHub stars">
+  </a>
+  <a href="https://github.com/projectravel/movielistapi">
+    <img src="https://img.shields.io/github/forks/projectravel/movielistapi?style=flat-square" alt="GitHub forks">
+  </a>
+  <a href="https://github.com/projectravel/movielistapi">
+    <img src="https://img.shields.io/github/issues/projectravel/movielistapi?style=flat-square" alt="GitHub issues">
+  </a>
+</p>
+
+<p align="center">
+  Explore movies with real-time search powered by AJAX and API integration.
+</p>
 
 ## Features
 
-- **Real-Time Search:** Users can perform instant searches without leaving the current page.
-- **API Integration:** Utilizes a specified API to fetch and display search results in real-time.
-- **Responsive Design:** Ensures seamless user interaction and adaptability across different devices.
+- **Real-Time Search:** Perform instant searches without page reloads.
+- **API Integration:** Fetch and display movie details from an external API.
+- **Responsive Design:** Ensures optimal viewing on various devices.
 
 ## Technologies Used
 
-- **AJAX (Asynchronous JavaScript and XML):** Facilitates asynchronous data retrieval and interactive user interfaces.
-- **API (Application Programming Interface):** Provides access to external data sources for search functionality.
-- **HTML, CSS, JavaScript:** Standard web development languages for structuring, styling, and scripting the user interface.
+- **AJAX (Asynchronous JavaScript and XML)**
+- **API (Application Programming Interface)**
+- **HTML, CSS, JavaScript**
 
 ## Getting Started
 
-To get a local copy up and running follow these simple steps.
+To get a local copy up and running, follow these simple steps.
 
 ### Prerequisites
 
-- Ensure you have a modern web browser installed.
-- Any text editor or IDE of your choice.
-`
-### Installation`
+- Modern web browser
+- Text editor or IDE of your choice
+
+### Installation
 
 1. Clone the repo
    ```sh
-   git clone https://github.com/ProjectRavel/MovieListAPI
+   git clone https://github.com/projectravel/movielistapi.git
