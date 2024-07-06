@@ -1,6 +1,17 @@
+html, body {
+    height: 100%;
+    margin: 0;
+}
+
 body {
       background: #222831;
       color: #ffffff;
+      display: flex;
+      flex-direction: column;
+    }
+
+    footer{
+    height: 100%;
     }
 
     .backgroundprimary{
@@ -11,6 +22,10 @@ body {
       background-color: #31363f;
       color: #ffffff;
       border: none;
+    }
+
+    #movieList{
+      margin-bottom: 50px;
     }
 
     .modal-header,
