@@ -1,10 +1,6 @@
 <h1 align="center">MovieListAPI</h1>
 
 <p align="center">
-  <img src="https://your_image_url_here" alt="Logo" width="120" height="120">
-</p>
-
-<p align="center">
   <a href="https://github.com/projectravel/movielistapi">
     <img src="https://img.shields.io/github/stars/projectravel/movielistapi?style=flat-square" alt="GitHub stars">
   </a>
