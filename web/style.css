@@ -1,0 +1,89 @@
+body {
+      background: #222831;
+      color: #ffffff;
+    }
+
+    .backgroundprimary{
+      background-color: #222831;
+    }
+
+    .modal-content {
+      background-color: #31363f;
+      color: #ffffff;
+      border: none;
+    }
+
+    .modal-header,
+    .modal-footer {
+      border: none;
+    }
+
+    .card {
+      border: none;
+      background-color: #222831;
+      color: #ffffff;
+      transition: transform 0.2s;
+    }
+
+    .card:hover {
+      transform: translateY(-5px);
+    }
+
+    .card-img-top {
+      height: 300px;
+      object-fit: cover;
+    }
+
+    .card-title {
+      font-size: 1.25rem;
+      font-weight: bold;
+    }
+
+    .card-text {
+      color: #76abae;
+    }
+
+    .bg-primary-edited {
+      background-color: #31363f;
+    }
+
+    .list-group-item-borderless {
+      border: none;
+    }
+    
+    #apiLoadingSpinner {
+    display: none; /* Hide by default */
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 1000; /* Ensure it appears above other content */
+   }
+
+   #modalLoadingSpinner {
+    display: none; /* Hide by default */
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 1000; /* Ensure it appears above other content */
+}
+
+    ::-webkit-scrollbar {
+      width: 8px;
+      /* Lebar scrollbar */
+    }
+
+    ::-webkit-scrollbar-track {
+      background: #222831;
+      /* Warna latar belakang track scrollbar */
+    }
+
+    ::-webkit-scrollbar-thumb {
+      background-color: #31363f;
+      /* Warna thumb scrollbar */
+      border-radius: 10px;
+      /* Sudut border thumb */
+      border: 2px solid #222831;
+      /* Border thumb */
+    }
