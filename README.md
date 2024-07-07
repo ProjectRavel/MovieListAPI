@@ -21,7 +21,7 @@
   Explore movies with real-time search and a comprehensive list of all movies ever shown, integrated with the OMDB API.
 </p>
 
-![Screenshot](/img/Screenshot%202024-07-06%20202759.png)
+![Screenshot](/img/homepage.png)
 
 ## Features
 
