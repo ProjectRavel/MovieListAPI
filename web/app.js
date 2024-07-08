@@ -12,12 +12,17 @@ window.addEventListener("DOMContentLoaded", async () => {
     const response = await fetch(
       "http://www.omdbapi.com/?apikey=dca61bcc&s=avengers"
     );
-    const data = await response.json();
-    const movies = data.Search;
-    const moviesCard = movieDataList(movies);
-    movieList.innerHTML = moviesCard;
-    apiLoadingSpinner.style.display = "none";
-    modalEventListener();
+    console.log(response)
+    if(!response.ok){
+      throw new Error(response.statusText)
+    }else{
+      const data = await response.json();
+      const movies = data.Search;
+      const moviesCard = movieDataList(movies);
+      movieList.innerHTML = moviesCard;
+      apiLoadingSpinner.style.display = "none";
+      modalEventListener();
+    }
   } catch (error) {
     console.error("Eror fetching data: ", error);
     apiLoadingSpinner.style.display = "none";
@@ -34,17 +39,24 @@ form.addEventListener("submit", (e) => {
 async function searhMovie(keyword) {
   try{
     const response = await fetch("http://www.omdbapi.com/?apikey=dca61bcc&s=" + keyword)
-    const data = await response.json()
+    if(!response.ok){
+      throw new Error(response.statusText)
+    }else{
+       const data = await response.json()
+    console.log(data)
     if(data.Response === "True"){
       const UpdateUI = movieDataList(data.Search)
       apiLoadingSpinner.style.display = "none"
       movieList.innerHTML = UpdateUI
+      modalEventListener()
     }else{
       apiLoadingSpinner.style.display = "none"
       movieList.innerHTML = `<h1 class="container text-center">Movies Not Found...</h1>`
     }
+    };
+   
   }catch (error){
-    console.error("Failed To response", error)
+  alert("Fetch Failed!")
   }
 }
 
@@ -80,9 +92,13 @@ function modalEventListener() {
         const response = await fetch(
           "http://www.omdbapi.com/?apikey=dca61bcc&i=" + movieId
         );
-        const data = await response.json();
-        const infomodal = modalData(data)
-        modalBody.innerHTML = infomodal
+        if(!response.ok){
+          throw new Error(response.statusText)
+        }else{
+          const data = await response.json();
+          const infomodal = modalData(data)
+          modalBody.innerHTML = infomodal
+        }
       } catch (error) {
         console.error("Failed Get Data: ", error);
       }
