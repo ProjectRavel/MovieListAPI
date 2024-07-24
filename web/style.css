@@ -4,10 +4,24 @@ html, body {
 }
 
 body {
-      background: #222831;
+      background: #0a0a0a;
       color: #ffffff;
       display: flex;
       flex-direction: column;
+    }
+
+    .btn-success{
+      background-color: #15fc21;
+      color: #222831;
+      font-weight: bold;
+    }
+
+    .form-control:focus {
+      border-color: #15fc21;
+    }
+
+    .text-center{
+      color: #15fc21;;
     }
 
     footer{
@@ -15,7 +29,7 @@ body {
     }
 
     .backgroundprimary{
-      background-color: #222831;
+      background-color: #0a0a0a;
     }
 
     .modal-content {
@@ -35,7 +49,7 @@ body {
 
     .card {
       border: none;
-      background-color: #222831;
+      background-color: #121212;
       color: #ffffff;
       transition: transform 0.2s;
     }
