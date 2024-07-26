@@ -26,7 +26,9 @@ refreshButton.addEventListener("click", () => {
 async function fetchMovies(keyword) {
   apiLoadingSpinner.style.display = "block";
   try {
-    const response = await fetch(`http://www.omdbapi.com/?apikey=dca61bcc&s=${keyword}`);
+    const response = await fetch(
+      `http://www.omdbapi.com/?s=${keyword}&apikey=53db7541`
+    );
     if (!response.ok) {
       throw new Error(response.statusText);
     } else {
@@ -50,7 +52,9 @@ async function fetchMovies(keyword) {
 
 async function searchMovie(keyword) {
   try {
-    const response = await fetch(`http://www.omdbapi.com/?apikey=dca61bcc&s=${keyword}`);
+    const response = await fetch(
+      `http://www.omdbapi.com/?s=${keyword}&apikey=53db7541`
+    );
     if (!response.ok) {
       throw new Error(response.statusText);
     } else {
@@ -91,16 +95,17 @@ function movieDataList(movieData) {
               </div>`;
     })
     .join("");
-}
+} 
 
 function modalEventListener() {
   const modalDetailBtn = document.querySelectorAll(".modal-detail-button");
   modalDetailBtn.forEach((btn) => {
     btn.addEventListener("click", async function (e) {
       const movieId = e.target.dataset.imdbid;
+      modalBody.innerHTML = "loading...";
       try {
         const response = await fetch(
-          `http://www.omdbapi.com/?apikey=dca61bcc&i=${movieId}`
+          `http://www.omdbapi.com/?i=${movieId}&apikey=53db7541`
         );
         if (!response.ok) {
           throw new Error(response.statusText);
@@ -108,6 +113,7 @@ function modalEventListener() {
           const data = await response.json();
           const infomodal = modalData(data);
           modalBody.innerHTML = infomodal;
+          modalLoadingSpinner.style.display = "none";
         }
       } catch (error) {
         console.error("Failed Get Data: ", error);
@@ -124,11 +130,16 @@ function modalData(movieInfo) {
               </div>
               <div class="col-md">
                 <ul class="list-group">
-                  <li class="list-group-item border-0"><h3>${movieInfo.Title} (${movieInfo.Year})</h3></li>
-                  <li class="list-group-item border-0 border-bottom"><strong>Genre: </strong>${movieInfo.Genre}</li>
-                  <li class="list-group-item border-0 border-bottom"><strong>Director: </strong>${movieInfo.Director}</li>
-                  <li class="list-group-item border-0 border-bottom"><strong>Actors: </strong>${movieInfo.Actors}</li>
-                  <li class="list-group-item border-0 border-bottom"><strong>Plot: </strong><p>${movieInfo.Plot}</p></li>
+                  <li class="list-group-item border-0"><h3>${movieInfo.Title}
+                   (${movieInfo.Year})</h3></li>
+                  <li class="list-group-item border-0 border-bottom">
+                  <strong>Genre: </strong>${movieInfo.Genre}</li>
+                  <li class="list-group-item border-0 border-bottom"
+                  <strong>Director: </strong>${movieInfo.Director}</li>
+                  <li class="list-group-item border-0 border-bottom">
+                  <strong>Actors: </strong>${movieInfo.Actors}</li>
+                  <li class="list-group-item border-0 border-bottom">
+                  <strong>Plot: </strong><p>${movieInfo.Plot}</p></li>
                 </ul>
               </div>
             </div>
